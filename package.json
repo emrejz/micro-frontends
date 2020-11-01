@@ -1,0 +1,27 @@
+{
+  "name": "mf",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "projects/*"
+  ],
+  "description": "",
+  "scripts": {
+    "start": "lerna run start --parallel",
+    "bs": "lerna bootstrap  && lerna clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrejz/micro-frontends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emrejz/micro-frontends/issues"
+  },
+  "homepage": "https://github.com/emrejz/micro-frontends#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
