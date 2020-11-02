@@ -1,0 +1,31 @@
+body {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+pre {
+  margin: 0px;
+  padding: 0px;
+}
+.navBarContainer {
+  display: flex;
+  box-shadow: 0px 6px 5px grey;
+  padding-left: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navBarContainer h2 {
+  padding: 20px;
+  margin: 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.navBarContainer h2:hover {
+  background-color: black;
+  color: white;
+}
