@@ -35,7 +35,8 @@
         "imports": {
           "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
           "@mf/root-config": "//localhost:9000/mf-root-config.js",
-          "@mf/nav-bar": "//localhost:8080/mf-nav-bar.js"
+          "@mf/nav-bar": "//localhost:8000/mf-nav-bar.js",
+          "@mf/home": "//localhost:8001/mf-home.js"
         }
       }
     </script>
@@ -58,7 +59,7 @@
         </header>
         <main>
           <route default>
-            <!-- <application name="@single-spa/welcome"></application> -->
+            <application name="@mf/home"></application>
           </route>
           <route path="emre">
             <application name="@single-spa/welcome"></application>
