@@ -41,8 +41,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "emre": "^1.0.0",
-    "nav-bar": "^1.0.3",
     "single-spa": "^5.3.1",
     "single-spa-layout": "1.1.5"
   },
