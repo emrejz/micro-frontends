@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "workspaces": [
-    "projects/*"
+    "projects/**/*"
   ],
   "description": "",
   "scripts": {
