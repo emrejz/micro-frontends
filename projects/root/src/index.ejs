@@ -4,42 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Micro front-end</title>
+    <title>Root Config</title>
 
     <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.5/runtime.min.js"></script>
-    <style>
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-      }
-      main {
-        display: flex;
-        flex: 1;
-      }
-      main div {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
 
-      *,
-      *::after,
-      *::before {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        text-decoration: none;
-      }
-    </style>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
-    />
     <meta name="importmap-type" content="systemjs-importmap" />
 
     <script type="systemjs-importmap">
@@ -51,19 +19,15 @@
         }
       }
     </script>
-    <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js"
-      as="script"
-    />
 
     <% if (isLocal) { %>
     <script type="systemjs-importmap">
       {
         "imports": {
           "@mf/root-config": "//localhost:9000/mf-root-config.js",
-          "@mf/nav-bar": "//localhost:8000/mf-nav-bar.js",
-          "@mf/home": "//localhost:8001/mf-home.js"
+          "@mf/react-nav-bar": "//localhost:8000/mf-nav-bar.js",
+          "@mf/react-home": "//localhost:8001/mf-home.js",
+          "@mf/vue-counter": "//localhost:8080/js/app.js"
         }
       }
     </script>
@@ -82,14 +46,14 @@
     <template id="single-spa-layout">
       <single-spa-router>
         <header>
-          <application name="@mf/nav-bar"></application>
+          <application name="@mf/react-nav-bar"></application>
         </header>
         <main>
-          <route default>
-            <application name="@mf/home"></application>
+          <route default exact>
+            <application name="@mf/react-home"></application>
           </route>
-          <route path="emre">
-            <div>emre</div>
+          <route path="counter" exact>
+            <application name="@mf/vue-counter"></application>
           </route>
         </main>
       </single-spa-router>

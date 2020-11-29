@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "single-spa": "^5.3.1",
-    "single-spa-layout": "1.1.5"
+    "single-spa-layout": "1.2.1"
   },
   "description": "> TODO: description",
   "author": "emre kayacan <emre.kayacan@msn.com>",
